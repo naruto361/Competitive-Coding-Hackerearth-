@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main()
+{
+    int n;
+    cin>>n;
+    while(n--)
+    {
+        int ans=0;
+        long long int a,b,c,d,e;
+        cin>>a>>b>>c>>d>>e;
+        int l=0,h=1000000;
+        int mid;
+        while(l<=h)
+        {mid=(l+h)/2;
+      
+         if((a*pow(mid,3) + b*pow(mid,2) + c*mid + d)<=e)  
+         {
+             ans=mid;
+             l=mid+1;
+         }
+         else 
+         h=mid-1;
+         
+        }
+        //if(ans<1000000)
+        cout<<ans<<endl;  
+        //else cout<<ans-100000<<endl;
+        
+    }
+}
