@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+long int n,c=0;
+double w,h;
+cin>>n;
+while(n--)
+{
+cin>>w>>h;
+if(w/h>=1.6&&w/h<=1.7)
+{
+c++;
+}
+if(h/w>=1.6&&h/w<=1.7)
+{
+c++;
+}
+}
+cout<<c<<endl;
+}
