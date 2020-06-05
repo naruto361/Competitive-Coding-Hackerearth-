@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int t;
+	cin>>t;
+	int a=0,b=7;
+	for(int i=0;i<t;i++)
+	{
+		int n;
+		cin>>n;
+		if(abs(n-a)<=abs(b-n))
+		{
+			cout<<"A";
+			a=n;
+		}
+		else
+		{
+			cout<<"B";
+			b=n;
+		}
+		cout<<endl;
+
+	}
+}
