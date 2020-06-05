@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	int d,s=0;
+	cin >> d;										
+	while(d--)
+	{	long double r,x;
+		cin>>r>>x;
+	if((x*100)>=(2*22*r)/7 )
+	s++;
+	}
+	cout<<s;
+	
+	
+}
+
+
