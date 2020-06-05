@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    while(n--)
+    {   int ans;
+        int a,b,k1,k2;
+        long long int m;
+        cin>>a>>b>>k1>>k2>>m;
+        long long int x=1,y=1000000,mid;
+        while(x<=y)
+        {
+            mid=(x+y)/2;
+            
+            if(a*pow(mid,k1)+b*pow(mid,k2)<=m)
+            {
+            x=mid+1;ans=mid;
+            }
+            else
+            y=mid-1;
+        }
+        if(ans<100000)
+        cout<<ans<<endl;
+        else
+        cout<<"Love is immortal"<<endl;
+        
+    }
+}
