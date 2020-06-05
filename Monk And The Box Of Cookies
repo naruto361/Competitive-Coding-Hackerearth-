@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int n;
+	cin>>n;
+	while(n--)
+	{
+		int t;
+		cin>>t;
+		int a[t];
+		for(int i=0;i<t;i++)
+		{
+			cin>>a[i];
+		}
+		int f[32]={0};
+		for(int i=0;i<t;i++)
+		{
+			int x = 0; 
+			while (a[i])
+			{ 
+				f[x]= f[x]+(a[i] & 1); 
+				x++;
+				a[i]>>= 1; 
+			} 
+		}
+		int maxi=*max_element(f,f+32);
+		for(int i=0;i<32;i++)
+		if(f[i]==maxi)
+		{cout<<i<<endl;
+		break;}
+	}
+}
