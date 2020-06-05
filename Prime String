@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{	
+	bool prime[100000+1]; 
+    memset(prime, true, sizeof(prime)); 
+	prime[1]=false;
+  	for (int p=2; p*p<=100000; p++) 
+    { 
+        if (prime[p] == true) 
+        { 
+            for (int i=p*p; i<=100000; i += p) 
+                prime[i] = false; 
+        } 
+    } 
+
+	int t;
+	cin>>t;
+	while(t--)
+	{
+		string s;
+		cin>>s;
+		int f[26]={0};
+		int l=s.length();
+		for(int i=0;i<l;i++)
+		f[s[i]-'a']++;
+		int d=0;
+		for(int i=0;i<26;i++)
+		if(f[i]!=0) d++;
+	
+		if(!prime[d])
+		cout<<"NO";
+		else
+		{	int h=1;
+			for(int i=0;i<26;i++)
+			{	
+				if(!prime[f[i]]) 
+				h=0;
+			}
+			if(h==0) cout<<"NO";
+			else cout<<"YES";
+		}
+
+		cout<<"\n";
+
+	}
+}
