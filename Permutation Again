@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+int n;
+cin>>n;
+while(n--)
+{
+	long long int t;
+	cin>>t;
+	if(t==1) cout<<1;
+	else
+	cout<<(t*(t-1))/2 - 1 + t/2;
+	cout<<endl;
+}
+}
