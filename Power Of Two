@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int n;
+	cin>>n;
+	int sum=0;
+	while(n--)
+	{
+	long long int k;
+	cin>>k;
+	if(__builtin_popcount(k)==1) sum++;
+	}
+cout<<sum;
+}
