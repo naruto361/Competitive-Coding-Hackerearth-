@@ -1,0 +1,36 @@
+#include <bits/stdc++.h> 
+using namespace std; 
+
+long long int db(long long int n) 
+{ 
+	if(n==0) return 0;
+	int num[16]={0}; 
+    int count1=0;
+	int i = 0; 
+	while (n > 0) { 
+
+		num[i] = n % 2;
+		if(num[i]==1)	
+		{
+		
+	    count1 =i;break;
+		}
+		n = n / 2; 
+		i++; 
+	} 
+
+
+	long long int ans=1;
+	for(int k=1;k<=count1;k++)
+	{ans=ans*2;
+	}
+	return ans;
+} 
+
+int main() 
+{ 
+    long long int n;
+	while(cin>>n){ 
+	cout<<db(n)<<endl;
+	}
+} 
