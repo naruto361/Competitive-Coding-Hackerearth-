@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+int n;
+cin>>n;
+for(int i=0;i<n;i++)
+{
+    int t;
+    cin>>t;
+    long long int a[t];
+    for(int j=0;j<t;j++)
+    cin>>a[j];
+    long long int sum=0;
+    for(int j=0;j<t;j++)
+    sum+=a[j];
+    sort(a,a+t);
+    sum=sum-a[t-1];
+    if(sum>a[t-1])
+    cout<<"Yes";
+    else
+    cout<<"No";
+    cout<<"\n";
+}
+}
