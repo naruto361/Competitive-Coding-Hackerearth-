@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int t;
+	cin>>t;
+	while(t--)
+	{
+		 int l,r;
+		cin>>l>>r;
+		int ans=0;
+	
+		int c;
+		if(l%4==2)
+		c=l;
+		else
+		if((l+1) %4==2)
+		c=l+1;
+		else if((l+2)%4==2)
+		c=l+2;
+		else c=l+3;
+
+		for(int j=c;j<=r;j=j+4)
+		ans++;
+		cout<<r-l+1-ans<<endl;
+	}
+}
