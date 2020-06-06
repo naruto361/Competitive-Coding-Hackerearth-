@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s;
+    cin>>s;
+    int n;
+    cin>>n;
+    int a=n%10;
+    int b=n%26;
+    int l=s.size();
+    for(int i=0;i<l;i++)
+    {
+        if((s[i]>=65&&s[i]<=90-b)||(s[i]>=97&&s[i]<=122-b))
+        s[i]=s[i]+(b);
+        else if(s[i]>=48&&s[i]<=57-a)
+        s[i]=s[i]+(a);
+        else if((s[i]>90-b&&s[i]<=90)||(s[i]>122-b&&s[i]<=122))
+        s[i]=s[i]+(b)-26;
+        else if(s[i]>57-a&&s[i]<=57)
+        s[i]=s[i]+(a)-10;
+        else
+        {}
+        
+    }
+    for(int i=0;i<l;i++)
+    cout<<s[i];
+}
