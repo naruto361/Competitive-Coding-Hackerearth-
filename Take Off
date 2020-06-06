@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int n;
+	cin>>n;
+	while(n--)
+	{	int sum=0;
+		int d,a,b,c;
+		cin>>d>>a>>b>>c;
+		for(int i=1;i<=d;i++)
+		{	int k=0;
+			if(i%a==0)
+			k++;
+			if(i%b==0)
+			k++;
+			if(i%c==0)
+			k++;
+
+			if(k==1)
+			{
+				sum++;
+			}
+
+		}
+
+
+		cout<<sum<<endl;
+
+	}
+}	
