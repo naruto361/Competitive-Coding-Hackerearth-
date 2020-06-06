@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    string str1,str2;
+    int l1,l2;
+    for(int i=0;i<n;i++)
+    {int count=0;
+    cin>>str1;
+    cin>>str2;
+    l1=str1.length();
+    l2=str2.length();
+    int f1[52]={0},f2[52]={0};
+    for(int j=0;j<=l1;j++)
+   {
+       if(str1[j]>='a'&&str1[j]<='z')
+       f1[str1[j]-'a']++;
+       
+       else if(str1[j]>='A'&&str1[j]<='Z')
+       f1[str1[j]-'A'+26]++;
+       
+   }
+    for(int j=0;j<=l2;j++)
+    {
+       if(str2[j]>='a'&&str2[j]<='z')
+       f2[str2[j]-'a']++;
+       
+       else if(str2[j]>='A'&&str2[j]<='Z')
+       f2[str2[j]-'A'+26]++;
+        
+    }
+    for(int m=0;m<52;m++)
+    count =count+abs(f1[m]-f2[m]);
+    cout<<count<<endl;
+    }   
+}
