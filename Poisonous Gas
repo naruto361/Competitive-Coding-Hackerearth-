@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int n;
+	cin>>n;
+	while(n--)
+	{
+		int t;
+		cin>>t;
+		long long int a[t];
+		for(int i=0;i<t;i++)
+		cin>>a[i];
+		unsigned long long int sum=0;
+		for(int i=0;i<t;i++)
+		{	if(a[i]>0)
+			sum=sum+a[i];
+		}
+		if(__builtin_popcount(sum)==1)
+		cout<<"Yes";
+		else
+		cout<<"No";
+		cout<<endl;
+
+	}
+}
