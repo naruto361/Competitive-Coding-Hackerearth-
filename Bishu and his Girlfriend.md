@@ -3,9 +3,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 void dfs(int node,int distance,vector<int> &vis,vector<vector<int>> v,
-vector<int> dist)
+vector<int> &dist)
 {
 	vis[node]=1;
+	dist[node]=distance;
 	for(int i=0;i<v[node].size();i++)
 	{
 		int k=v[node][i];
