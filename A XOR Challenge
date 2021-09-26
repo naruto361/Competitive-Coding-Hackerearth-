@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int c;
+	cin>>c;
+	int len = (int)log2(c)+1;
+	vector<int> st;
+	int a=0,b=0;long long maxi=0;
+	for(int i=0;i<len;i++)
+	{
+		if((c & (1<<i))) st.push_back(i);
+		else {
+			 a|= (1<<i);
+			 b|= (1<<i);
+		}
+	}
+	int n=st.size();
+	for(int i=0;i<(1<<n);i++)
+	{
+		int a1=a,b1=b;
+		for(int j=0;j<n;j++)
+		{
+			if(i & (1<<j)) a1 |= (1<<st[j]);
+			else b1 |= (1<<st[j]);
+		}
+		maxi = max(maxi,1LL * a1 * b1);
+	}
+	cout<<maxi;
+}
